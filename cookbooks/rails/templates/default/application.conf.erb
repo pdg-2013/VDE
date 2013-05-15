@@ -1,0 +1,10 @@
+<VirtualHost *:80>
+    RackEnv development
+    DocumentRoot <%= @node[:rails][:root] %>/public
+
+    <Directory <%= @node[:rails][:root] %>/public>
+        Allow from all
+        Options -MultiViews
+    </Directory>
+</VirtualHost>
+
